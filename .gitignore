@@ -1,0 +1,10 @@
+.settings
+.metadata
+target
+.project
+.classpath
+.buildpath
+.log
+.jtl
+bin
+.DS_Store
