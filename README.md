@@ -17,7 +17,7 @@ Assuming you have jdk install 1.6 or later, maven installation is required to ru
 
 Running Test
 ============
-Navigate to datetimepicker-ui-automation directory and execute below command.
+Navigate to ui-test-datetimepicker directory and execute below command.
 ```
 mvn clean test
 ```
