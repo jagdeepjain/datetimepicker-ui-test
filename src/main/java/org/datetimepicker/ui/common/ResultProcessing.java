@@ -1,8 +1,7 @@
 package org.datetimepicker.ui.common;
 
 import static org.junit.Assert.*;
-
-import org.datetimepicker.ui.TimePickerBasicExample1;
+import org.datetimepicker.ui.examples.TimePickerBasicExample1;
 import org.openqa.selenium.WebDriver;
 /**
  * @author Jagdeep Jain

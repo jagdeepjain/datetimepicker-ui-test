@@ -3,7 +3,7 @@
  */
 package org.datetimepicker.ui.automation.tests;
 
-import org.datetimepicker.ui.TimePickerBasicExample1;
+import org.datetimepicker.ui.examples.TimePickerBasicExample1;
 import org.datetimepicker.ui.common.AutomationUtil;
 import org.datetimepicker.ui.common.ResultProcessing;
 import org.junit.After;

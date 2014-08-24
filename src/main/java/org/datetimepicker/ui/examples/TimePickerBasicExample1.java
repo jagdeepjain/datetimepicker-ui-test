@@ -1,4 +1,4 @@
-package org.datetimepicker.ui;
+package org.datetimepicker.ui.examples;
 
 import org.datetimepicker.ui.components.Buttons;
 import org.datetimepicker.ui.components.EditBox;
