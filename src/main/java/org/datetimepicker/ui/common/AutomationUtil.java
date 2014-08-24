@@ -3,12 +3,9 @@
  */
 package org.datetimepicker.ui.common;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
-import java.util.TimeZone;
 
 import org.datetimepicker.ui.components.XPaths;
 import org.openqa.selenium.By;

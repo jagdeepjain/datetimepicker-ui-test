@@ -29,5 +29,5 @@ Benefits
 3. Common package can be used as it is.
 4. Writing test is more easy as the framework is more structured.
 5. BaseTest class will do all the repeatavtive work.
-6. Less use of XPath make test robust and maintainable, better use XPath from final static constants, it helps in quickly fixing the problems if Xpaths gets change.
+6. Less use of XPath make test robust and maintainable, better use XPath using final static constants, it helps quickly fixing problems.
 
