@@ -8,12 +8,13 @@ This project will demonstrate ui automation of jquery ui datimetime picker using
 Getting The Code
 ================
 ```
-git clone https://github.com/jagdeepjain/datetimepicker-ui-automation.git
+git clone https://github.com/jagdeepjain/datetimepicker-ui-test.git
 ```
 
 Pre-Requisite To Run Test
 =========================
 Assuming you have jdk 1.6 or later and maven installed.
+Firefox browser version 36.1 or less.
 
 Running Test
 ============
