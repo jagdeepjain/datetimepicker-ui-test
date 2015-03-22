@@ -23,7 +23,6 @@ public class TimePickerExample {
 	private final String examplesLink = "Examples";
 	// basic example # 1 date time picker on Examples page
 	private final String basicExampleId = "basic_example_1";
-
 	
 	public void setTimeStamp(WebDriver driver, int month, int startHr,
 			int startMin, String date) {

@@ -20,7 +20,6 @@ public class AutomationUtil {
 	public boolean isTextPresent(String textToBeVerified, WebDriver driver) {
 		boolean exists = true;
 		String pageText = driver.findElement(By.tagName("Body")).getText();
-		//System.out.println(pageText);
 		if (!pageText.contains(textToBeVerified)) {
 			exists = false;
 		}
@@ -40,7 +39,6 @@ public class AutomationUtil {
 
 	public void calDate(WebDriver driver, String day) {
 		WebElement dateWidget = driver.findElement(By.id("ui-datepicker-div"));
-
 		List<WebElement> rows = dateWidget.findElements(By.tagName("tr"));
 		List<WebElement> columns = dateWidget.findElements(By.tagName("td"));
 
@@ -55,14 +53,12 @@ public class AutomationUtil {
 	public void calTime(WebDriver driver, int hr, int min) {
 		WebElement sliderHr = driver.findElement(By.id("ui-datepicker-div"));
 		sliderHr = driver.findElement(By.xpath(XPath.calHr));
-
 		for (int i = 1; i <= hr; i++) {
 			sliderHr.sendKeys(Keys.ARROW_RIGHT);
 		}
 
 		WebElement sliderMin = driver.findElement(By.id("ui-datepicker-div"));
 		sliderMin = driver.findElement(By.xpath(XPath.calMinute));
-
 		for (int i = 1; i <= min; i++) {
 			sliderMin.sendKeys(Keys.ARROW_RIGHT);
 		}

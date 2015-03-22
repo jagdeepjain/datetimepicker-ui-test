@@ -2,7 +2,7 @@
 * @author jagdeepjain
 *
 */
-package org.datetimepicker.ui.common;
+package org.ui.test.config;
 
 import org.openqa.selenium.WebDriver;
 
