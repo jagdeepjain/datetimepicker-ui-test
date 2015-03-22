@@ -4,17 +4,18 @@
  */
 package org.datetimepicker.ui.tests;
 
+import org.datetimepicker.examples.DateTimePicker;
 import org.datetimepicker.examples.TimePickerExample;
-import org.datetimepicker.ui.common.AutomationUtil;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.ui.test.assertions.Assertion;
+import org.ui.test.util.Utility;
 
 public class TimePickerBasicExample1Test extends BaseTest {
 
 	TimePickerExample timePickerBasicExample1 = new TimePickerExample();
-	AutomationUtil automationUtil = new AutomationUtil();
+	Utility util = new Utility();
 	Assertion assertTest = new Assertion();
 	private String actual;
 	private String expected;
@@ -36,7 +37,7 @@ public class TimePickerBasicExample1Test extends BaseTest {
 		// next month from current date on 10th at 9:00 AM
 		timePickerBasicExample1.setTimeStamp(driver, 1, 9, 0, "10");
 		// converting to date format for comparison
-		expected = automationUtil.datePickedByUser(1, 10, 9, 0);
+		expected = util.getTimeStamp(1, 10, 9, 0);
 		actual = timePickerBasicExample1.getTimeStamp(driver);
 		assertTest.trueEquals(expected, actual,driver, className);
 	}

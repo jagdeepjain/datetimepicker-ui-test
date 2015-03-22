@@ -12,6 +12,8 @@ import org.ui.elements.UIElement;
 
 public class Button implements UIElement {
 	
+	private final String datePickerDiv = "ui-datepicker-div";
+	
 	public void button(WebDriver driver) {
 	}
 	
@@ -19,13 +21,13 @@ public class Button implements UIElement {
 	}
 	
 	public void done(WebDriver driver) {
-		WebElement done = driver.findElement(By.id("ui-datepicker-div"));
+		WebElement done = driver.findElement(By.id(datePickerDiv));
 		done.findElement(By.xpath(XPath.datePickerDone)).click();
 		done.sendKeys(Keys.TAB);
 	}
 	
 	public void now(WebDriver driver) {
-		WebElement done = driver.findElement(By.id("ui-datepicker-div"));
+		WebElement done = driver.findElement(By.id(datePickerDiv));
 		done.findElement(By.xpath(XPath.datePickerNow)).click();
 	}
 }
