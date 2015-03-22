@@ -2,7 +2,7 @@
 * @author jagdeepjain
 *
 */
-package org.datetimepicker.ui.examples;
+package org.datetimepicker.examples;
 
 import org.datetimepicker.ui.components.Button;
 import org.datetimepicker.ui.components.InputBox;

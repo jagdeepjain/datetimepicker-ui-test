@@ -6,7 +6,7 @@ package org.datetimepicker.ui.common;
 
 import static org.junit.Assert.*;
 
-import org.datetimepicker.ui.examples.TimePickerExample;
+import org.datetimepicker.examples.TimePickerExample;
 import org.openqa.selenium.WebDriver;
 import org.ui.test.config.InitConfig;
 
