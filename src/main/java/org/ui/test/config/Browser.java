@@ -2,15 +2,14 @@
 * @author jagdeepjain
 *
 */
-package org.datetimepicker.ui.common;
+package org.ui.test.config;
 
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.ui.test.config.InitConfig;
 
-public class SetupBrowser {
+public class Browser {
 
 	InitConfig appConfig = new InitConfig();
 	

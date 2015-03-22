@@ -2,7 +2,7 @@
 * @author jagdeepjain
 *
 */
-package org.datetimepicker.ui.common;
+package org.ui.test.util;
 
 import java.io.File;
 import java.io.IOException;

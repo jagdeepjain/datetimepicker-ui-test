@@ -9,6 +9,7 @@ import static org.junit.Assert.*;
 import org.datetimepicker.examples.TimePickerExample;
 import org.openqa.selenium.WebDriver;
 import org.ui.test.config.InitConfig;
+import org.ui.test.util.ScreenShotMaker;
 
 public class Assertion {
 	
@@ -24,7 +25,6 @@ public class Assertion {
 			assertTrue(timePickerBasicExample1.getTimeStamp(driver).equals(validationText));	
 		} catch (Error e) {
 			screenShotMaker.takeScreenShot(driver, e, className);
-			appInitConfig.verificationErrors.append(e.toString());
 		}
 	}
 
