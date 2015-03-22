@@ -11,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SetupBrowser {
 
-	AppConfig appConfig = new AppConfig();
+	InitConfig appConfig = new InitConfig();
 	
 	//using fireFox to test application
 	public WebDriver setBrowser(WebDriver driver) {

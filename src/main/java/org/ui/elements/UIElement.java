@@ -2,7 +2,7 @@
 * @author jagdeepjain
 *
 */
-package org.datetimepicker.ui.components;
+package org.ui.elements;
 
 import org.openqa.selenium.WebDriver;
 

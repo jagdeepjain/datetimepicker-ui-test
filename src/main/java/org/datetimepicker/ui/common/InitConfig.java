@@ -6,7 +6,7 @@ package org.datetimepicker.ui.common;
 
 import org.openqa.selenium.WebDriver;
 
-public class AppConfig {
+public class InitConfig {
 	
 	//verification error
 	public StringBuffer verificationErrors = new StringBuffer();

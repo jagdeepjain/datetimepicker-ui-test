@@ -7,6 +7,7 @@ package org.datetimepicker.ui.components;
 import org.datetimepicker.ui.common.AutomationUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.ui.elements.UIElement;
 
 public class InputBox implements UIElement {
 

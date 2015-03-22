@@ -6,12 +6,12 @@ package org.datetimepicker.ui.automation.tests;
 
 import static org.junit.Assert.*;
 
-import org.datetimepicker.ui.common.AppConfig;
+import org.datetimepicker.ui.common.InitConfig;
 import org.datetimepicker.ui.common.SetupBrowser;
 import org.openqa.selenium.WebDriver;
 
 public class BaseTest {
-	AppConfig appConfig = new AppConfig();
+	InitConfig appConfig = new InitConfig();
 	SetupBrowser setupAppUnderTest = new SetupBrowser();
 	
 	public WebDriver driver;
