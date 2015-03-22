@@ -28,7 +28,7 @@ public class TimePickerExample {
 	public void setDateTime(WebDriver driver, int month, int startHr,
 			int startMin, String date) {
 		((InputBox) inputBox).basicExample1(driver, month, startHr, startMin, date);
-		((Button) button).datePickerDoneButton(driver);
+		((Button) button).done(driver);
 	}
 	
 	public void goToExamples(WebDriver driver) {

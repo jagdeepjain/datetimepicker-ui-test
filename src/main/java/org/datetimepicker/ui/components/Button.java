@@ -11,36 +11,21 @@ import org.openqa.selenium.WebElement;
 
 public class Button implements UIElement {
 	
-	public void doneButton(WebDriver driver) {
-		WebElement done = driver.findElement(By.id("ui-datepicker-div"));
-		done.findElement(By.xpath(XPath.datePickerDone)).click();
-		done.sendKeys(Keys.TAB);
-	}
-	
-	public void nowButton(WebDriver driver) {
-		WebElement done = driver.findElement(By.id("ui-datepicker-div"));
-		done.findElement(By.xpath(XPath.datePickerNow)).click();
-	}
-	
 	public void button(WebDriver driver) {
 	}
 	
 	public void inputBox(WebDriver driver) {	
 	}
 	
-	public void datePickerDoneButton(WebDriver driver) {
+	public void done(WebDriver driver) {
 		WebElement done = driver.findElement(By.id("ui-datepicker-div"));
 		done.findElement(By.xpath(XPath.datePickerDone)).click();
 		done.sendKeys(Keys.TAB);
 	}
 	
-	public void datePickerNowButton(WebDriver driver) {
+	public void now(WebDriver driver) {
 		WebElement done = driver.findElement(By.id("ui-datepicker-div"));
 		done.findElement(By.xpath(XPath.datePickerNow)).click();
 	}
-
-	
-	
-	
 }
 

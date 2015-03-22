@@ -11,10 +11,11 @@ import org.openqa.selenium.WebDriver;
 public class InputBox implements UIElement {
 
 	AutomationUtil automationUtil = new AutomationUtil();
-
+	private final String basicExample1 = "basic_example_1";
+	
 	public void basicExample1(WebDriver driver, int month, int startHr,
 			int startMin, String date) {
-		driver.findElement(By.id("basic_example_1")).click();
+		driver.findElement(By.id(basicExample1)).click();
 		automationUtil.calMonth(driver, month);
 		automationUtil.calDate(driver, date);
 		automationUtil.calTime(driver, startHr, startMin);

@@ -1,7 +1,7 @@
 /**
-* @author jagdeepjain
-*
-*/
+ * @author jagdeepjain
+ *
+ */
 package org.datetimepicker.ui.automation.tests;
 
 import org.datetimepicker.ui.examples.TimePickerExample;
@@ -16,7 +16,7 @@ public class TimePickerBasicExample1Test extends BaseTest {
 	TimePickerExample timePickerBasicExample1 = new TimePickerExample();
 	AutomationUtil automationUtil = new AutomationUtil();
 	ResultProcessing resultProcessing = new ResultProcessing();
-	
+
 	@Before
 	public void setUp() throws Exception {
 		super.setUp();
@@ -31,9 +31,12 @@ public class TimePickerBasicExample1Test extends BaseTest {
 	public void test() {
 		String className = this.getClass().getCanonicalName();
 		timePickerBasicExample1.goToExamples(driver);
-		timePickerBasicExample1.setDateTime(driver, 1, 9, 0, "10"); //next month on 10th at 9:00 AM
-		resultProcessing.verifyResults(automationUtil.datePickedByUser(1, 10, 9, 0), driver, className);
-		
+		// next month from current date on 10th at 9:00 AM
+		timePickerBasicExample1.setDateTime(driver, 1, 9, 0, "10");
+		resultProcessing
+				.verifyResults(automationUtil.datePickedByUser(1, 10, 9, 0),
+						driver, className);
+
 	}
 
 }
