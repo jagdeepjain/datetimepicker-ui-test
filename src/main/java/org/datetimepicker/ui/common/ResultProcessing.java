@@ -1,18 +1,19 @@
+/**
+* @author jagdeepjain
+*
+*/
 package org.datetimepicker.ui.common;
 
 import static org.junit.Assert.*;
-import org.datetimepicker.ui.examples.TimePickerBasicExample1;
+import org.datetimepicker.ui.examples.TimePickerExample;
 import org.openqa.selenium.WebDriver;
-/**
- * @author Jagdeep Jain
- *
- */
+
 public class ResultProcessing {
 	
 	ScreenShotMaker screenShotMaker = new ScreenShotMaker();
 	AutomationUtil automationUtil = new AutomationUtil();
 	AppConfig appConfig = new AppConfig();
-	TimePickerBasicExample1 timePickerBasicExample1 = new TimePickerBasicExample1();
+	TimePickerExample timePickerBasicExample1 = new TimePickerExample();
 
 	
 	// verify and save screen shot in case of test failure

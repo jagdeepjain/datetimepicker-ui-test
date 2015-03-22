@@ -1,22 +1,19 @@
 /**
- * 
- */
+* @author jagdeepjain
+*
+*/
 package org.datetimepicker.ui.automation.tests;
 
-import org.datetimepicker.ui.examples.TimePickerBasicExample1;
+import org.datetimepicker.ui.examples.TimePickerExample;
 import org.datetimepicker.ui.common.AutomationUtil;
 import org.datetimepicker.ui.common.ResultProcessing;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * @author Jagdeep Jain
- *
- */
 public class TimePickerBasicExample1Test extends BaseTest {
 
-	TimePickerBasicExample1 timePickerBasicExample1 = new TimePickerBasicExample1();
+	TimePickerExample timePickerBasicExample1 = new TimePickerExample();
 	AutomationUtil automationUtil = new AutomationUtil();
 	ResultProcessing resultProcessing = new ResultProcessing();
 	

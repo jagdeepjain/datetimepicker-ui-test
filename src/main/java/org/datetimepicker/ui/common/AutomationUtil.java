@@ -1,22 +1,19 @@
 /**
- * 
- */
+* @author jagdeepjain
+*
+*/
 package org.datetimepicker.ui.common;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.List;
 
-import org.datetimepicker.ui.components.XPaths;
+import org.datetimepicker.ui.components.XPath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-/**
- * @author Jagdeep Jain
- * 
- */
 public class AutomationUtil {
 
 	// checking if text present on the page or not, for validation purpose
@@ -42,7 +39,6 @@ public class AutomationUtil {
 	}
 
 	public void calDate(WebDriver driver, String day) {
-
 		WebElement dateWidget = driver.findElement(By.id("ui-datepicker-div"));
 
 		List<WebElement> rows = dateWidget.findElements(By.tagName("tr"));
@@ -58,14 +54,14 @@ public class AutomationUtil {
 
 	public void calTime(WebDriver driver, int hr, int min) {
 		WebElement sliderHr = driver.findElement(By.id("ui-datepicker-div"));
-		sliderHr = driver.findElement(By.xpath(XPaths.calHr));
+		sliderHr = driver.findElement(By.xpath(XPath.calHr));
 
 		for (int i = 1; i <= hr; i++) {
 			sliderHr.sendKeys(Keys.ARROW_RIGHT);
 		}
 
 		WebElement sliderMin = driver.findElement(By.id("ui-datepicker-div"));
-		sliderMin = driver.findElement(By.xpath(XPaths.calMinute));
+		sliderMin = driver.findElement(By.xpath(XPath.calMinute));
 
 		for (int i = 1; i <= min; i++) {
 			sliderMin.sendKeys(Keys.ARROW_RIGHT);
@@ -73,7 +69,6 @@ public class AutomationUtil {
 	}
 	
 	public String datePickedByUser (int month, int day, int hr, int min) {
-		
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.DAY_OF_MONTH, day);
 		cal.add(Calendar.MONTH, month);
@@ -81,9 +76,6 @@ public class AutomationUtil {
 		cal.set(Calendar.MINUTE, min);
 		SimpleDateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy hh:mm");
 		String date = dateFormat.format(cal.getTime());
-		
-		return date;
-		
-		
+		return date;	
 	}
 }

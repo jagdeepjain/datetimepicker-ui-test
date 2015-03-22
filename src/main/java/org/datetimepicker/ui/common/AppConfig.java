@@ -1,14 +1,11 @@
 /**
- * 
- */
+* @author jagdeepjain
+*
+*/
 package org.datetimepicker.ui.common;
 
 import org.openqa.selenium.WebDriver;
 
-/**
- * @author Jagdeep Jain
- *
- */
 public class AppConfig {
 	
 	//verification error

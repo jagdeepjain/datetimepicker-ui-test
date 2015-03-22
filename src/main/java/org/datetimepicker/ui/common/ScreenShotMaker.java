@@ -1,3 +1,7 @@
+/**
+* @author jagdeepjain
+*
+*/
 package org.datetimepicker.ui.common;
 
 import java.io.File;
@@ -7,10 +11,7 @@ import org.apache.maven.surefire.shade.org.apache.maven.shared.utils.io.FileUtil
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-/**
- * @author Jagdeep Jain
- *
- */
+
 public class ScreenShotMaker {
 	
 	// take screen shot on the test failures
