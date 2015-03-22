@@ -2,7 +2,7 @@
  * @author jagdeepjain
  *
  */
-package org.datetimepicker.ui.automation.tests;
+package org.datetimepicker.ui.tests;
 
 import org.datetimepicker.examples.TimePickerExample;
 import org.datetimepicker.ui.common.AutomationUtil;
