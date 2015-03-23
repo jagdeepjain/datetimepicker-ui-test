@@ -7,9 +7,9 @@ package org.datetimepicker.ui.components;
 import org.datetimepicker.examples.DateTimePicker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.ui.elements.AbstractInputBox;
+import org.ui.elements.AbstractInput;
 
-public class InputBox extends AbstractInputBox {
+public class Input extends AbstractInput {
 
 	DateTimePicker calendarPicker = new DateTimePicker();
 	private final String basicExample1 = "basic_example_1";

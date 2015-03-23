@@ -5,7 +5,7 @@
 package org.datetimepicker.examples;
 
 import org.datetimepicker.ui.components.Button;
-import org.datetimepicker.ui.components.InputBox;
+import org.datetimepicker.ui.components.Input;
 import org.ui.elements.UIElement;
 import org.ui.elements.UIElementFactory;
 import org.openqa.selenium.By;
@@ -23,9 +23,8 @@ public class TimePickerExample {
 	// basic example # 1 date time picker on Examples page
 	private final String basicExampleId = "basic_example_1";
 	
-	public void setTimeStamp(WebDriver driver, int month, int startHr,
-			int startMin, String date) {
-		((InputBox) inputBox).basicExample1(driver, month, startHr, startMin, date);
+	public void setTimeStamp(WebDriver driver, int month, int startHr, int startMin, String date) {
+		((Input) inputBox).basicExample1(driver, month, startHr, startMin, date);
 		((Button) button).done(driver);
 	}
 	
