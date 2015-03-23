@@ -43,7 +43,6 @@ public class DateTimePicker {
 		for (int i = 1; i <= hr; i++) {
 			sliderHr.sendKeys(Keys.ARROW_RIGHT);
 		}
-
 		WebElement sliderMin = driver.findElement(By.id(datePickerDiv));
 		sliderMin = driver.findElement(By.xpath(calendarMinute));
 		for (int i = 1; i <= min; i++) {
