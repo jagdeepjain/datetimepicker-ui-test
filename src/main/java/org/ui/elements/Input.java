@@ -4,10 +4,14 @@
 */
 package org.ui.elements;
 
+import org.datetimepicker.examples.DateTimePicker;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class Input implements UIElement {
+	
+	DateTimePicker calendarPicker = new DateTimePicker();
 
 	public void done(WebDriver driver) {
 	}
