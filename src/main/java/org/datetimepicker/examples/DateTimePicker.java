@@ -11,22 +11,18 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import org.ui.elements.UIElement;
+
 public class DateTimePicker {
 	
-	private final String datePickerDiv = "ui-datepicker-div";
-	//private final String calendarMonth = "//*[@id='ui-datepicker-div']/div[1]/a[2]/span";
-	private final String calendarHr = "//*[@id='ui-datepicker-div']/div[2]/dl/dd[2]/div/span";
-	private final String calendarMinute = "//*[@id='ui-datepicker-div']/div[2]/dl/dd[3]/div/span";
-
 	public void getCalendarMonth(WebDriver driver, int month) {
-		WebElement calMonth = driver.findElement(By.id(datePickerDiv));
+		WebElement calMonth = driver.findElement(By.id(UIElement.datePickerDiv));
 		for (int i = 1; i <= month; i++) {
 			calMonth.findElement(By.linkText("Next")).click();
 		}
 	}
-
 	public void getCalendarDate(WebDriver driver, String day) {
-		WebElement dateWidget = driver.findElement(By.id(datePickerDiv));
+		WebElement dateWidget = driver.findElement(By.id(UIElement.datePickerDiv));
 		//List<WebElement> rows = dateWidget.findElements(By.tagName("tr"));
 		List<WebElement> columns = dateWidget.findElements(By.tagName("td"));
 		for (WebElement cell : columns) {
@@ -36,18 +32,16 @@ public class DateTimePicker {
 			}
 		}
 	}
-
 	public void getCalendarTime(WebDriver driver, int hr, int min) {
-		WebElement sliderHr = driver.findElement(By.id(datePickerDiv));
-		sliderHr = driver.findElement(By.xpath(calendarHr));
+		WebElement sliderHr = driver.findElement(By.id(UIElement.datePickerDiv));
+		sliderHr = driver.findElement(By.xpath(UIElement.calendarHr));
 		for (int i = 1; i <= hr; i++) {
 			sliderHr.sendKeys(Keys.ARROW_RIGHT);
 		}
-		WebElement sliderMin = driver.findElement(By.id(datePickerDiv));
-		sliderMin = driver.findElement(By.xpath(calendarMinute));
+		WebElement sliderMin = driver.findElement(By.id(UIElement.datePickerDiv));
+		sliderMin = driver.findElement(By.xpath(UIElement.calendarMinute));
 		for (int i = 1; i <= min; i++) {
 			sliderMin.sendKeys(Keys.ARROW_RIGHT);
 		}
 	}
-	
 }
