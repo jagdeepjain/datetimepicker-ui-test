@@ -3,7 +3,7 @@ datetimepicker-ui-automation
 
 Description
 ===========
-This project will demonstrate ui automation of jquery ui datimetime picker using selenium webdriver and junit.
+This project will demonstrate ui automation of jquery ui datimetime picker using selenium webdriver and junit with google pageFactory support.
 
 Getting The Code
 ================
@@ -23,13 +23,18 @@ Execute below command from root directory.
 ```
 mvn clean test
 ```
+OR
+```
+mvn clean test -Dtest=<testName>
+```
 
 Benefits
 ========
 1. User can pick dates and add to test according date and time will be picked up from calender.
 2. Package has screenshot maker, if junit test fails this class will create a screen shot of the failure screen which you can look into target/surefire-reports folder.
 3. Common package can be used as it is.
-4. Writing test is more easy as the framework is more structured.
-5. BaseTest class will do all the repeatavtive work.
-6. Less use of XPath make test robust and maintainable, better use XPath using final static constants, it helps quickly fixing problems.
+4. Writing page objects and tests is simple.
+5. BaseTest class will do all the repeatative work.
+6. Page object has services defined as methods which mocks the user.
+
 
