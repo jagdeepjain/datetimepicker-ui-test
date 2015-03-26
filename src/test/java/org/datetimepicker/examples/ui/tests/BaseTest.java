@@ -2,10 +2,9 @@
  * @author jagdeepjain
  *
  */
-package org.datetimepicker.ui.tests;
+package org.datetimepicker.examples.ui.tests;
 
 import org.openqa.selenium.WebDriver;
-
 import org.ui.test.config.Browser;
 
 public class BaseTest {

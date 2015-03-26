@@ -2,17 +2,17 @@
  * @author jagdeepjain
  *
  */
-package org.datetimepicker.ui.tests;
+package org.datetimepicker.examples.ui.tests;
 
 import static org.junit.Assert.assertTrue;
 
-import org.datetimepicker.examples.TimePickerExamplesPage;
+import org.datetimepicker.examples.ui.TimePickerExamplesPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
-import org.ui.common.ScreenShotMaker;
-import org.ui.common.Utility;
+import org.ui.test.common.ScreenShotMaker;
+import org.ui.test.common.Utility;
 
 public class TimePickerExamplesPageTitleTest extends BaseTest {
   

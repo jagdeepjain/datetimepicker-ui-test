@@ -2,7 +2,7 @@
  * @author jagdeepjain
  *
  */
-package org.ui.common;
+package org.ui.test.common;
 
 import java.io.File;
 import java.io.IOException;

@@ -2,7 +2,7 @@
  * @author jagdeepjain
  *
  */
-package org.datetimepicker.examples;
+package org.datetimepicker.examples.ui;
 
 import java.util.List;
 
