@@ -10,13 +10,13 @@ import org.openqa.selenium.support.PageFactory;
 import org.ui.common.ScreenShotMaker;
 import org.ui.common.Utility;
 
-public class TimePickerBasicExample1Test extends BaseTest {
+public class TimePickerExamplesPageTitleTest extends BaseTest {
   
-  Utility calendar = new Utility();
+  Utility util = new Utility();
   ScreenShotMaker screenShotMaker = ScreenShotMaker.getInstance();
   
   private String actual;
-  private String expected;
+  private String expected = "Adding a Timepicker to jQuery UI Datepicker";
   
   @Before
   public void setUp() throws Exception {
@@ -35,14 +35,8 @@ public class TimePickerBasicExample1Test extends BaseTest {
     
     // save fully qualified class name to used in test reports
     String className = this.getClass().getCanonicalName();
-    timePickerExamplesPage.clickExamplesTab();
+    actual = timePickerExamplesPage.getPageTitle();
     
-    // next month from current date on 10th at 9:00 AM
-    timePickerExamplesPage.setDateTime(1, 9, 0, "10");
-    
-    // getting the actual calendar
-    expected = calendar.getDateTime(1, 9, 0, 10);
-    actual = timePickerExamplesPage.getDateTime();
     try {
       screenShotMaker.takeScreenShot(driver, className);
       assertTrue(expected.equals(actual));
