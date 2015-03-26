@@ -14,7 +14,6 @@ public class TimePickerBasicExample1Test extends BaseTest {
   
   Utility calendar = new Utility();
   ScreenShotMaker screenShotMaker = ScreenShotMaker.getInstance();
-  
   private String actual;
   private String expected;
   
