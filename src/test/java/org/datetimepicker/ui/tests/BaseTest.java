@@ -1,18 +1,17 @@
 package org.datetimepicker.ui.tests;
 
 import org.openqa.selenium.WebDriver;
+
 import org.ui.test.config.Browser;
-import org.ui.test.config.InitConfig;
 
 public class BaseTest {
-  InitConfig appInitConfig = new InitConfig();
-  Browser fireFoxInstance = new Browser();
-  
   public WebDriver driver;
   
+  Browser trentrichardson = new Browser(driver);
+  
   public void setUp() throws Exception {
-    driver = fireFoxInstance.getBrowser();
-    appInitConfig.openURL(driver);
+    driver = trentrichardson.getBrowser();
+    trentrichardson.openURL();
   }
   
   public void tearDown() throws Exception {

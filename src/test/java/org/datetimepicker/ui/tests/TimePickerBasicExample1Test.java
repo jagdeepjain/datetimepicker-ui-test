@@ -6,16 +6,19 @@ import org.datetimepicker.examples.TimePickerExamplesPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 import org.openqa.selenium.support.PageFactory;
+
 import org.ui.common.ScreenShotMaker;
 import org.ui.common.Utility;
 
 public class TimePickerBasicExample1Test extends BaseTest {
   
-  Utility calendar = new Utility();
-  ScreenShotMaker screenShotMaker = ScreenShotMaker.getInstance();
   private String actual;
   private String expected;
+  
+  Utility calendar = new Utility();
+  ScreenShotMaker screenShotMaker = ScreenShotMaker.getInstance();
   
   @Before
   public void setUp() throws Exception {
