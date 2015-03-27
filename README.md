@@ -28,13 +28,20 @@ OR
 mvn clean test -Dtest=<testName>
 ```
 
+Travis-CI
+=========
+Look at travis-ci for this project:
+```
+https://travis-ci.org/jagdeepjain/datetimepicker-ui-test/
+```
+
 Benefits
 ========
 1. User can pick dates and add to test according date and time will be picked up from calender.
 2. Package has screenshot maker, if junit test fails this class will create a screen shot of the failure screen which you can look into target/surefire-reports folder.
 3. Common package can be used as it is.
 4. Writing page objects and tests is simple.
-5. BaseTest class will do all the repeatative work.
+5. BaseTest class will set infrastructure for testing work.
 6. Page object has services defined as methods which mocks the user.
 
 
