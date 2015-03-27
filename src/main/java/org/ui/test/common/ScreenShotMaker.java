@@ -14,9 +14,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 public class ScreenShotMaker {
-  
   private static ScreenShotMaker instance = new ScreenShotMaker();
-  
   private ScreenShotMaker() {
   }
   
