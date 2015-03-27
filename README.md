@@ -28,9 +28,8 @@ OR
 mvn clean test -Dtest=<testName>
 ```
 
-Travis-CI
-=========
-Look at travis-ci for this project:
+Running your test on Travis-CI with each commit
+===============================================
 ```
 https://travis-ci.org/jagdeepjain/datetimepicker-ui-test/
 ```
