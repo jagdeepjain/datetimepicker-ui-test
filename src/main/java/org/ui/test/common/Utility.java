@@ -12,7 +12,6 @@ public class Utility {
   
   public String getDateTime(int month, int hr, int min, int day) {
     String date = null;
-    
     Calendar cal = Calendar.getInstance();
     cal.set(Calendar.DAY_OF_MONTH, day);
     cal.add(Calendar.MONTH, month);
