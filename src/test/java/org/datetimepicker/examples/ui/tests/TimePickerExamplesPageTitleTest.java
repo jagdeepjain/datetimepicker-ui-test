@@ -20,7 +20,7 @@ public class TimePickerExamplesPageTitleTest extends BaseTest {
   ScreenShotMaker screenShotMaker = ScreenShotMaker.getInstance();
   
   private String actual;
-  private String expected = "A dding a Timepicker to jQuery UI Datepicker";
+  private String expected = "Adding a Timepicker to jQuery UI Datepicker";
   
   @Before
   public void setUp() throws Exception {
