@@ -20,7 +20,7 @@ public class TimePickerExamplesPageTitleTest extends BaseTest {
   ScreenShotMaker screenShotMaker = ScreenShotMaker.getInstance();
   
   private String actual;
-  private String expected = "Adding a Timepicker to jQuery UI Datepicker";
+  private String expected = "A dding a Timepicker to jQuery UI Datepicker";
   
   @Before
   public void setUp() throws Exception {
@@ -33,7 +33,7 @@ public class TimePickerExamplesPageTitleTest extends BaseTest {
   }
   
   @Test
-  public void test() throws Exception {
+  public void test() throws Error {
     TimePickerExamplesPage timePickerExamplesPage = PageFactory.initElements(
         driver, TimePickerExamplesPage.class);
     
@@ -42,10 +42,10 @@ public class TimePickerExamplesPageTitleTest extends BaseTest {
     actual = timePickerExamplesPage.getPageTitle();
     
     try {
-      screenShotMaker.takeScreenShot(driver, className);
       assertTrue(expected.equals(actual));
     } catch (Error e) {
       screenShotMaker.takeScreenShot(driver, className);
+      throw e;
     }
   }
 }

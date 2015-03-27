@@ -33,7 +33,7 @@ public class TimePickerBasicExample1Test extends BaseTest {
   }
   
   @Test
-  public void test() throws Exception {
+  public void test() throws Error {
     TimePickerExamplesPage timePickerExamplesPage = PageFactory.initElements(
         driver, TimePickerExamplesPage.class);
     
@@ -52,6 +52,7 @@ public class TimePickerBasicExample1Test extends BaseTest {
       assertTrue(expected.equals(actual));
     } catch (Error e) {
       screenShotMaker.takeScreenShot(driver, className);
+      throw e;
     }
   }
 }
