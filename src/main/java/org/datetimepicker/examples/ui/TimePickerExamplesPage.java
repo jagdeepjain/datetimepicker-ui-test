@@ -25,33 +25,32 @@ public class TimePickerExamplesPage {
   public TimePickerExamplesPage(WebDriver driver) {
     this.driver = driver;
   }
-
   // get date from calendar
   private By goToCalendarDate(String date) {
     return By.linkText(date);
   }
-  // get By elements
-  private WebElement getElement(By element) {
+  // findElement by locator
+  private WebElement findElement(By element) {
     return driver.findElement(element); 
-  }  
+  }
+  
   // get page title
   public String getPageTitle() {
-    return getElement(pageTitleLocator).getText();
+    return findElement(pageTitleLocator).getText();
   }
   
   // click on examples tab
   public TimePickerExamplesPage clickExamplesTab() {
-    getElement(examplesLinkLocator).click();
+    findElement(examplesLinkLocator).click();
     return this;
   }
   
   // use calendar to set date and time
   public TimePickerExamplesPage setDateTime(int month, int startHour, int startMinute, String date) {
     // show calendar
-    getElement(basicExamplesLinkLocator).click();
-    
+    findElement(basicExamplesLinkLocator).click();
     // set month
-    WebElement calendar = getElement(datePickerDivLocator);
+    WebElement calendar = findElement(datePickerDivLocator);
     for (int i = 1; i <= month; i++) {
       calendar.findElement(calendarNextButtonLocator).click();
     }
@@ -65,18 +64,18 @@ public class TimePickerExamplesPage {
     }
     // set hour
     for (int i = 1; i <= startHour; i++) {
-      getElement(calendarHourLocator).sendKeys(Keys.ARROW_RIGHT);
+      findElement(calendarHourLocator).sendKeys(Keys.ARROW_RIGHT);
     }
     // set minute
     for (int i = 1; i <= startMinute; i++) {
-      getElement(calendarMinuteLocator).sendKeys(Keys.ARROW_RIGHT);
+      findElement(calendarMinuteLocator).sendKeys(Keys.ARROW_RIGHT);
     }
     return this;
   }
   
   // get the entered date and time
   public String getDateTime() {
-    return driver.findElement(basicExamplesLinkLocator).getAttribute("value");
+    return findElement(basicExamplesLinkLocator).getAttribute("value");
   }
   
 }
