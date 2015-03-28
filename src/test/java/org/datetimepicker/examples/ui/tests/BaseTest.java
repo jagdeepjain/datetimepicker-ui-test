@@ -8,18 +8,18 @@ import org.openqa.selenium.WebDriver;
 import org.ui.test.config.Browser;
 
 public class BaseTest {
-  public WebDriver driver;
+  protected WebDriver driver;
   
-  Browser trentrichardson = new Browser(driver);
+  private Browser trentrichardson = new Browser(driver);
   
   // setting up test infrastructure
-  public void setUp() throws Exception {
+  protected void setUp() throws Exception {
     driver = trentrichardson.getBrowser();
     trentrichardson.openURL();
   }
   
   // tearing down test infrastructure
-  public void tearDown() throws Exception {
+  protected void tearDown() throws Exception {
     driver.quit();
   }
   

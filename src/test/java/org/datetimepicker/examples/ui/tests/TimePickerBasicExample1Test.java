@@ -12,16 +12,13 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 import org.ui.test.common.ScreenShotMaker;
-import org.ui.test.common.Utility;
+import org.ui.test.common.Util;
 
 public class TimePickerBasicExample1Test extends BaseTest {
   
   private String actual;
   private String expected;
-  
-  Utility calendar = new Utility();
-  ScreenShotMaker screenShotMaker = ScreenShotMaker.getInstance();
-  
+
   @Before
   public void setUp() throws Exception {
     super.setUp();
@@ -33,9 +30,8 @@ public class TimePickerBasicExample1Test extends BaseTest {
   }
   
   @Test
-  public void test() throws Error {
-    TimePickerExamplesPage timePickerExamplesPage = PageFactory.initElements(
-        driver, TimePickerExamplesPage.class);
+  public void test() throws Exception {
+    TimePickerExamplesPage timePickerExamplesPage = PageFactory.initElements(driver, TimePickerExamplesPage.class);
     
     // save fully qualified class name to used in test reports
     String className = this.getClass().getCanonicalName();
@@ -45,13 +41,14 @@ public class TimePickerBasicExample1Test extends BaseTest {
     timePickerExamplesPage.setDateTime(1, 9, 0, "10");
     
     // getting the actual calendar
-    expected = calendar.getDateTime(1, 9, 0, 10);
+    expected = Util.getDateTime(1, 9, 0, 10);
+    // get the date which was set by setDateTime()
     actual = timePickerExamplesPage.getDateTime();
+    
     try {
-      screenShotMaker.takeScreenShot(driver, className);
       assertTrue(expected.equals(actual));
-    } catch (Error e) {
-      screenShotMaker.takeScreenShot(driver, className);
+    } catch (Exception e) {
+      ScreenShotMaker.getInstance().takeScreenShot(driver, className);
       throw e;
     }
   }
