@@ -29,7 +29,7 @@ public class TimePickerExamplesPage {
   private By goToCalendarDate(String date) {
     return By.linkText(date);
   }
-  // findElement by locator
+  // findElement by locator, wrapping selenium findElement
   private WebElement findElement(By element) {
     return driver.findElement(element); 
   }
@@ -54,7 +54,7 @@ public class TimePickerExamplesPage {
     for (int i = 1; i <= month; i++) {
       calendar.findElement(calendarNextButtonLocator).click();
     }
-    //set date
+    // set date
     List<WebElement> column = calendar.findElements(calendarDateContainer);
     for (WebElement cell : column) {
       if (cell.getText().equals(date)) {
