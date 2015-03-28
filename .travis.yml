@@ -4,5 +4,17 @@ before_install:
 - "export DISPLAY=:99.0"
 - "sh -e /etc/init.d/xvfb start"
 
-after_success:
-- "mvn sonar:sonar"
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "xViOuGTUL5vjkjPeYM2dpfYGQkiK7SQXwOwrSNdZiA1gs23xBDdewT6XphcxaeVTUTFp2YNRU0LBoyIk6VgTJru/hx8epRkf9aAWZf3Gii2o8vZrgfw3PJa87Qpr/nPCq+MrOrDFjRu19BVjLa96JlXewZkfX+//lkDuV7dhU+Q="
+
+addons:
+  coverity_scan:
+    project:
+      name: "jagdeepjain/datetimepicker-ui-test"
+      description: "Build submitted via Travis CI"
+    build_command_prepend: "mvn clean"
+    build_command:   "mvn -DskipTests=true compile"
+    branch_pattern: "*"
