@@ -4,78 +4,80 @@
  */
 package org.datetimepicker.examples.ui;
 
-import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class TimePickerExamplesPage {
-  private final WebDriver driver;
   // locators
-  By pageTitleLocator = By.tagName("h1");
-  By examplesLinkLocator = By.id("ui-id-5");
-  By basicExamplesLinkLocator = By.id("basic_example_1");
-  By datePickerDivLocator = By.id("ui-datepicker-div");
-  By calendarHourLocator = By.xpath("//*[@id='ui-datepicker-div']/div[2]/dl/dd[2]/div/span");
-  By calendarMinuteLocator = By.xpath("//*[@id='ui-datepicker-div']/div[2]/dl/dd[3]/div/span");
-  By calendarNextButtonLocator = By.linkText("Next");
-  By calendarDateContainer = By.tagName("td");
-  // constructor
-  public TimePickerExamplesPage(WebDriver driver) {
-    this.driver = driver;
-  }
-  // get date from calendar
-  private By goToCalendarDate(String date) {
-    return By.linkText(date);
-  }
-  // findElement by locator, wrapping selenium findElement
-  private WebElement findElement(By element) {
-    return driver.findElement(element); 
-  }
+  @FindBy(tagName = "h1")
+  protected WebElement pageTitleLocator;
+  @FindBy(id = "ui-id-5")
+  protected WebElement examplesLinkLocator;
+  @FindBy(id = "basic_example_1")
+  protected WebElement basicExamplesLinkLocator;
+  
+  @FindBy(id = "ui-datepicker-div")
+  protected WebElement dateTimePickerLocator;
+ 
+  protected By dateTimePickerMonthLocator = By.linkText("Next");
+  protected By dateTimePickerDateLocator = By.tagName("td");
+  protected By dateTimePickerHourMinuteLocator = By.className("ui-slider-handle");
+  protected By dateTimePickerDoneLocator = By.className("ui-datepicker-close");
   
   // get page title
   public String getPageTitle() {
-    return findElement(pageTitleLocator).getText();
+    return pageTitleLocator.getText();
   }
   
   // click on examples tab
   public TimePickerExamplesPage clickExamplesTab() {
-    findElement(examplesLinkLocator).click();
+    examplesLinkLocator.click();
     return this;
   }
   
   // use calendar to set date and time
-  public TimePickerExamplesPage setDateTime(int month, int startHour, int startMinute, String date) {
+  public TimePickerExamplesPage setDateTime(int month, int selectedDate, int startHour, int startMinute) {
     // show calendar
-    findElement(basicExamplesLinkLocator).click();
+    basicExamplesLinkLocator.click();
+    
     // set month
-    WebElement calendar = findElement(datePickerDivLocator);
     for (int i = 1; i <= month; i++) {
-      calendar.findElement(calendarNextButtonLocator).click();
+      dateTimePickerLocator.findElement(dateTimePickerMonthLocator).click();
     }
     // set date
-    List<WebElement> column = calendar.findElements(calendarDateContainer);
-    for (WebElement cell : column) {
-      if (cell.getText().equals(date)) {
-        cell.findElement(goToCalendarDate(date)).click();
-        break;
+    int size = dateTimePickerLocator.findElements(dateTimePickerDateLocator).size();
+    for (int i = 1; i <= size; i++) {
+      String text = dateTimePickerLocator.findElements(dateTimePickerDateLocator).get(i).getText();
+      int dateTimePickerDateLocatorText = 0;
+      if (!" ".equals(text)) {
+        dateTimePickerDateLocatorText = Integer.valueOf(text);
+        if  (dateTimePickerDateLocatorText == selectedDate) {
+          dateTimePickerLocator.findElements(dateTimePickerDateLocator).get(i).click();
+          break;
+        }
       }
     }
     // set hour
     for (int i = 1; i <= startHour; i++) {
-      findElement(calendarHourLocator).sendKeys(Keys.ARROW_RIGHT);
+      dateTimePickerLocator.findElements(dateTimePickerHourMinuteLocator).get(0).sendKeys(Keys.ARROW_RIGHT);
     }
     // set minute
     for (int i = 1; i <= startMinute; i++) {
-      findElement(calendarMinuteLocator).sendKeys(Keys.ARROW_RIGHT);
+      dateTimePickerLocator.findElements(dateTimePickerHourMinuteLocator).get(1).sendKeys(Keys.ARROW_RIGHT);
     }
+    // clicking on done button
+    dateTimePickerLocator.findElement(dateTimePickerDoneLocator).click();
+    
+    // returning on the same page as date picker does not navigate to any page
     return this;
   }
   
   // get the entered date and time
-  public String getDateTime() {
-    return findElement(basicExamplesLinkLocator).getAttribute("value");
+  public String getDateTimeValue() {
+    return basicExamplesLinkLocator.getAttribute("value");
   }
   
 }

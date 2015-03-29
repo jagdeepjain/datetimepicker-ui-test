@@ -6,6 +6,8 @@ package org.datetimepicker.examples.ui.tests;
 
 import static org.junit.Assert.assertTrue;
 
+import java.io.IOException;
+
 import org.datetimepicker.examples.ui.TimePickerExamplesPage;
 import org.junit.After;
 import org.junit.Before;
@@ -30,26 +32,22 @@ public class TimePickerBasicExample1Test extends BaseTest {
   }
   
   @Test
-  public void test() throws Exception {
+  public void test() throws AssertionError, IOException {
     TimePickerExamplesPage timePickerExamplesPage = PageFactory.initElements(driver, TimePickerExamplesPage.class);
-    
     // save fully qualified class name to used in test reports
     String className = this.getClass().getCanonicalName();
     timePickerExamplesPage.clickExamplesTab();
-    
-    // next month from current date on 10th at 9:00 AM
-    timePickerExamplesPage.setDateTime(1, 9, 0, "10");
-    
-    // getting the actual calendar
-    expected = Util.getDateTime(1, 9, 0, 10);
+    // next month on 9th at 9:10 AM
+    timePickerExamplesPage.setDateTime(1, 9, 9, 10); 
+    // getting the actual date in the format of date time picker mm/dd/yyyy hh:mm
+    expected = Util.getDateTime(1, 9, 9, 10);
     // get the date which was set by setDateTime()
-    actual = timePickerExamplesPage.getDateTime();
-    
+    actual = timePickerExamplesPage.getDateTimeValue();   
     try {
       assertTrue(expected.equals(actual));
-    } catch (Exception e) {
+    } catch (AssertionError ae) {
       ScreenShotMaker.getInstance().takeScreenShot(driver, className);
-      throw e;
+      throw ae;
     }
   }
 }

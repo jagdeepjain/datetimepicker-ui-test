@@ -4,7 +4,9 @@
  */
 package org.datetimepicker.examples.ui.tests;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
+
+import java.io.IOException;
 
 import org.datetimepicker.examples.ui.TimePickerExamplesPage;
 import org.junit.After;
@@ -29,19 +31,17 @@ public class TimePickerExamplesPageTitleTest extends BaseTest {
   }
   
   @Test
-  public void test() throws Exception {
+  public void test() throws AssertionError, IOException {
     TimePickerExamplesPage timePickerExamplesPage = PageFactory.initElements(driver, TimePickerExamplesPage.class);
-    
     // save fully qualified class name to be used in test reports
     String className = this.getClass().getCanonicalName();
     // get the page title
     actual = timePickerExamplesPage.getPageTitle();
-    
     try {
       assertTrue(expected.equals(actual));
-    } catch (Exception e) {
+    } catch (AssertionError ae) {
       ScreenShotMaker.getInstance().takeScreenShot(driver, className);
-      throw e;
+      throw ae;
     }
   }
 }
