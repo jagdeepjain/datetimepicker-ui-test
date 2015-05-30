@@ -21,12 +21,12 @@ public class TimePickerExamplesPageTitleTest extends BaseTest {
     private String expected = "Adding a Timepicker to jQuery UI Datepicker";
     
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         super.setUp();
     }
     
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         super.tearDown();
     }
     

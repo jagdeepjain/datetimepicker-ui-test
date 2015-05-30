@@ -22,12 +22,12 @@ public class TimePickerBasicExample1Test extends BaseTest {
     private String expected;
     
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         super.setUp();
     }
     
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         super.tearDown();
     }
     

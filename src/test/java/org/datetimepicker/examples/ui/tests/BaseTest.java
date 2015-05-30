@@ -13,13 +13,13 @@ public class BaseTest {
     private Browser trentrichardson = new Browser(driver);
     
     // setting up test infrastructure
-    protected void setUp() throws Exception {
+    protected void setUp() {
         driver = trentrichardson.getBrowser();
         trentrichardson.openURL();
     }
     
     // tearing down test infrastructure
-    protected void tearDown() throws Exception {
+    protected void tearDown() {
         driver.quit();
     }
     
