@@ -2,7 +2,7 @@
  * @author jagdeepjain
  *
  */
-package org.ui.test.config;
+package org.jagdeep.example.test.config;
 
 import java.util.concurrent.TimeUnit;
 

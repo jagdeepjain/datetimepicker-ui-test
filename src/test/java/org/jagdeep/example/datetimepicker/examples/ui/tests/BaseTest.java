@@ -2,10 +2,10 @@
  * @author jagdeepjain
  *
  */
-package org.datetimepicker.examples.ui.tests;
+package org.jagdeep.example.datetimepicker.examples.ui.tests;
 
+import org.jagdeep.example.test.config.Browser;
 import org.openqa.selenium.WebDriver;
-import org.ui.test.config.Browser;
 
 public class BaseTest {
     protected WebDriver driver;

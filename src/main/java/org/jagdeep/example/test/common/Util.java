@@ -2,7 +2,7 @@
  * @author jagdeepjain
  *
  */
-package org.ui.test.common;
+package org.jagdeep.example.test.common;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

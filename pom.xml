@@ -3,7 +3,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>datetimepicker-ui-automation</artifactId>
-	<groupId>org.datetimepicker.ui.automation</groupId>
+	<groupId>org.jagdeep.example</groupId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>Date Time Picker UI Automation</name>

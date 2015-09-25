@@ -2,7 +2,7 @@
  * @author jagdeepjain
  *
  */
-package org.datetimepicker.examples.ui;
+package org.jagdeep.example.datetimepicker.examples.ui;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
